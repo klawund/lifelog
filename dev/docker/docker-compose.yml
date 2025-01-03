@@ -1,0 +1,20 @@
+version: '3'
+
+volumes:
+  lifelog-pg-data: { }
+
+networks:
+  lifelog-compose-network:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - lifelog-pg-data:/var/lib/postgresql
+    networks:
+      - lifelog-compose-network
+    environment:
+      POSTGRES_PASSWORD: postgres

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lifelog
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lifelog
+    username:
+
+flyway:
+  enabled: true
+  location: classpath:db/migration
+  baseline-on-migrate: true
+  create-database: true
+  clean-disabled: true
