@@ -8,11 +8,12 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/lifelog
-    username:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
 
 flyway:
   enabled: true
-  location: classpath:db/migration
+  locations: classpath:db/migration
   baseline-on-migrate: true
-  create-database: true
-  clean-disabled: true
+  baseline-version: 1

@@ -9,7 +9,7 @@ networks:
 
 services:
   postgres:
-    image: postgres
+    image: postgres:15
     restart: always
     shm_size: 128mb
     volumes:
@@ -17,4 +17,8 @@ services:
     networks:
       - lifelog-compose-network
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lifelog
+    ports:
+      - 5432:5432

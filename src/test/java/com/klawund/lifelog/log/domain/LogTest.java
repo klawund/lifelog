@@ -27,7 +27,7 @@ class LogTest {
 
         assertNotNull(log);
         assertEquals(ID, log.getId());
-        assertEquals(NOW, log.getWhen());
+        assertEquals(NOW, log.getDate());
         assertEquals(ONE, log.getAmount());
         assertEquals(READING_TYPE_ID, log.getTypeId());
         assertEquals(DESCRIPTION, log.getDescription());
